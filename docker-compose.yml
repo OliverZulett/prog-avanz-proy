@@ -34,9 +34,9 @@ services:
     container_name: mysql-container
     image: mysql/mysql-server:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: proyectopass
+      MYSQL_ROOT_PASSWORD: projectpass
       MYSQL_ROOT_HOST: "%"
-      MYSQL_DATABASE: proyecto
+      MYSQL_DATABASE: project
     ports:
       - 3306:3306
     volumes:

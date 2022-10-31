@@ -13,6 +13,8 @@
   </head>
   <body class="text-gray-700">
 
+    <? include 'functions/db-connection.php' ?>
+
     <? include 'components/loader.php' ?>
 
     <? include 'components/header.php' ?>

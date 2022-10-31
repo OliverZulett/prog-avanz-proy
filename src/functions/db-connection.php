@@ -3,14 +3,17 @@
   $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'project'");
   $tables     = $query->fetchAll(PDO::FETCH_COLUMN);
 
-  if (empty($tables)) {
-      echo '<p class="center">There are no tables in database <code>demo</code>.</p>';
-  } else {
-      echo '<p class="center">Database <code>demo</code> contains the following tables:</p>';
-      echo '<ul class="center">';
-      foreach ($tables as $table) {
-          echo "<li>{$table}</li>";
-      }
-      echo '</ul>';
-  }
+  $getAllExercises = $connection->query("SELECT _id as id, name, content, image FROM exercises e");
+  $exercises = $getAllExercises->fetchAll();
+
+//   if (empty($tables)) {
+//       echo '<p class="center">There are no tables in database <code>demo</code>.</p>';
+//   } else {
+//       echo '<p class="center">Database <code>demo</code> contains the following tables:</p>';
+//       echo '<ul class="center">';
+//       foreach ($tables as $table) {
+//           echo "<li>{$table}</li>";
+//       }
+//       echo '</ul>';
+//   }
 ?>
